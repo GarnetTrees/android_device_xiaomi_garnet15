@@ -32,3 +32,8 @@ ro.audio.resampler.psd.halflength=960
 ro.audio.resampler.psd.cutoff_percent=100
 ro.audio.resampler.psd.tbwcheat=0
 ro.audio.ignore_effects=false
+
+# QTI Mem Optimisation
+persist.vendor.sys.memplus.enable=false
+ro.vendor.qti.sys.fw.bg_apps_limit=30
+ro.vendor.qti.sys.fw.bservice_limit=60
