@@ -192,10 +192,6 @@ PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey:64 \
     libcrypto_shim.vendor:64
 
-# Device-specific settings
-PRODUCT_PACKAGES += \
-    XiaomiParts
-
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
