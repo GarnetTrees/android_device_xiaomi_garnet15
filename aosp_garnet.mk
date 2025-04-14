@@ -10,29 +10,22 @@ TARGET_SUPPORTS_OMX_SERVICE := false
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Inherit from garnet device
 $(call inherit-product, device/xiaomi/garnet/device.mk)
 
 # MiuiCamera
-$(call inherit-product-if-exists, vendor/xiaomi/garnet-miuicamera/products/miuicamera.mk)
-$(call inherit-product, vendor/xiaomi/garnet-miuicamera/products/board.mk)
+$(call inherit-product-if-exists, device/xiaomi/miuicamera-garnet/device.mk)
 
-# Device config
-TARGET_ENABLE_BLUR := true
-TARGET_EXCLUDES_AUDIOFX := true
-TARGET_FACE_UNLOCK_SUPPORTED := true
-
-# GAPPS (valid only for GAPPS builds)
+# The Pixel Project Flags
+CUSTOM_BUILD_TYPE := OFFICIAL
 TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_SUPPORTS_CALL_RECORDING := true
-TARGET_INCLUDE_STOCK_ARCORE := false
-TARGET_INCLUDE_LIVE_WALLPAPERS := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_INCLUDE_MATLOG := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+WITH_GMS := true
 
-PRODUCT_NAME := lineage_garnet
+PRODUCT_NAME := aosp_garnet
 PRODUCT_DEVICE := garnet
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
